@@ -76,7 +76,7 @@ orderedData <- mergedData[order(mergedData$SubjectId),]
 tidyDataColNames <- names(orderedData)
 tidyDataColNames <- gsub("-mean", "Mean", tidyDataColNames)
 tidyDataColNames <- gsub("-std", "Std", tidyDataColNames)
-tidyDataColNames <- gsub("()", "", tidyDataColNames)
+tidyDataColNames <- gsub("\\(\\)", "", tidyDataColNames)
 tidyDataColNames <- gsub("tG", "Time-G", tidyDataColNames)
 tidyDataColNames <- gsub("tB", "Time-B", tidyDataColNames)
 tidyDataColNames <- gsub("fB", "Frequency-B", tidyDataColNames)
