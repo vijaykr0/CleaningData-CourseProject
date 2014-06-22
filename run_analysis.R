@@ -90,4 +90,5 @@ setnames(orderedData, tidyDataColNames)
 ##############################
 ## Write the data to a file ##
 ##############################
+write.table(orderedData, file="finalData.txt")
 write.csv(orderedData, file = "finalData.csv", row.names=FALSE)
