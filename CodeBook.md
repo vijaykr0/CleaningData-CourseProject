@@ -6,4 +6,5 @@ Get the columns indices containing the mean and standard deviation data and crea
 Merge the three tables for test data and do the same for the training data and store them in testData and trainingData data frame.
 Merge the test and training data into a mergedData data frame.
 Order the merged data based on the subject id and store them in orderedData data frame.
+Clean up the column headers. 
 Write orderedData into a file. 
