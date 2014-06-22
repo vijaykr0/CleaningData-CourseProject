@@ -70,6 +70,23 @@ activities$Id <- NULL ##Remove the index column from the activities table
 mergedData$Activity <- activities[mergedData$Activity, ]
 orderedData <- mergedData[order(mergedData$SubjectId),]
 
+##########################################
+## Clean up the column headers a little ##
+##########################################
+tidyDataColNames <- names(orderedData)
+tidyDataColNames <- gsub("-mean()", "Mean", tidyDataColNames)
+tidyDataColNames <- gsub("-std()", "Std", tidyDataColNames)
+tidyDataColNames <- gsub("tG", "G", tidyDataColNames)
+tidyDataColNames <- gsub("tB", "B", tidyDataColNames)
+tidyDataColNames <- names(orderedData)
+tidyDataColNames <- gsub("-mean()", "Mean", tidyDataColNames)
+tidyDataColNames <- gsub("-std()", "Std", tidyDataColNames)
+tidyDataColNames <- gsub("tG", "Time-G", tidyDataColNames)
+tidyDataColNames <- gsub("tB", "Time-B", tidyDataColNames)
+tidyDataColNames <- gsub("fB", "Frequency-B", tidyDataColNames)
+tidyDataColNames <- gsub("Body", "Body", tidyDataColNames)
+setnames(orderedData, tidyDataColNames)
+
 ##############################
 ## Write the data to a file ##
 ##############################
